@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Rogo Academy — applied finance training for the AI era.">
+<title>VC Math: Ownership, Dilution &amp; Returns · Rogo Academy</title>
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-inner">
+  <a class="brand" href="../../index.html" aria-label="Rogo Academy home"><img src="../../assets/rogo-wordmark-dark.png" alt="Rogo"><span class="divider"></span><span class="academy">Academy</span></a>
+  <nav class="nav" aria-label="Primary"><a href="../../index.html" class="">Home</a><a href="../../vc/index.html" class="">Venture & Growth Track</a><a href="../../vc/ai-assisted-work.html" class="">AI-Assisted Work</a><a href="../../vc/index.html#fundamentals" class="active">Fundamentals</a><a href="../../vc/graded-cases.html" class="">Graded Cases</a></nav>
+  <span class="progress-pill" data-progress-pill>0 of 9 complete</span>
+</div></header>
+<main id="main">
+<section class="hero"><div class="hero-inner"><div class="crumbs"><a href="../../index.html">Rogo Academy</a> / <a href="../index.html">Venture & Growth Equity</a> / Module 4</div><div class="eyebrow">Module 4 · 45 min</div><h1>VC Math: Ownership, Dilution & Returns</h1><div class="rule"></div><p class="lede">Round math, dilution to exit, MOIC and IRR, required exit value and fund-returner math.</p></div></section><div class="module-layout"><aside class="toc"><span class="label">On this page</span><a href="#objectives">Objectives</a><a href="#teach">Teach</a><a href="#worked">Worked example</a><a href="#lab">Lab</a><a href="#check">Practice check</a><a href="#watch">AI watch-outs</a><a href="#graded">Graded case</a></aside><div class="module-main">
+<section class="section" id="objectives"><div class="eyebrow">By the end you can</div><ul class="objectives" style="margin-top:16px"><li>Compute post-money, ownership, price per share and new shares</li><li>Carry ownership through future rounds to exit</li><li>Calculate MOIC and IRR, and explain why both matter</li><li>Work backward to the required exit and the fund-returner exit</li></ul></section>
+<section class="section" id="teach"><div class="eyebrow">Teach</div><div class="prose">
+<h3>Round math</h3>
+<div class="formula">Post-money       = Pre-money + New investment
+Investor stake   = Investment ÷ Post-money
+Price per share  = Pre-money ÷ Pre-money fully diluted shares
+New shares       = Investment ÷ Price per share</div>
+<h3>Dilution to exit</h3>
+<p>Every later round and option pool top-up dilutes existing holders. If a holder does not buy more, ownership falls by the share of the company each round sells:</p>
+<div class="formula">Exit ownership = Entry ownership × (1 − d₁) × (1 − d₂) × … × (1 − dₙ)</div>
+<p><strong>Pro rata rights</strong> let an investor buy enough of the next round to hold its stake, but that takes reserve capital. Whether to exercise pro rata is a portfolio decision, covered in Module 8.</p>
+<h3>Returns</h3>
+<div class="formula">MOIC = Proceeds ÷ Invested capital
+IRR  = MOIC^(1 ÷ years) − 1        (single investment, single exit)</div>
+<p>The same 3x is excellent over three years (44% IRR) and mediocre over ten (12%). Funds report both, and LPs care about both.</p>
+<h3>Working backward: the exit you need</h3>
+<div class="formula">Required exit equity value = Target proceeds ÷ Exit ownership
+Fund-returner exit         = Fund size ÷ Exit ownership</div>
+<p>Venture returns follow a power law: a few outcomes drive most of a fund's return. So the key question for every initial check is whether this company could plausibly <strong>return the fund</strong> at the ownership you will have at exit, not whether the round is fairly priced.</p>
+</div></section>
+<section class="section" id="worked"><div class="eyebrow">Worked example · Cobalt Ledger</div><div class="prose">
+<p><strong>Entry.</strong> $40M Series B at a $160M pre-money gives a $200M post-money and <strong>20.0%</strong> ownership.</p>
+<p><strong>Dilution.</strong> Assume a Series C sells 15%, a Series D sells 12% and option refreshes take 3%. Retention = 0.85 × 0.88 × 0.97 = 72.6%. Exit ownership = 20.0% × 72.6% = <strong>14.5%</strong>.</p>
+<p><strong>Required exit.</strong> For 5x on $40M ($200M of proceeds), the company must exit at $200M ÷ 14.5% = <strong>$1.38B</strong>. To return a $750M fund from this one position, it would need to exit at <strong>$5.17B</strong>.</p>
+<p><strong>Returns.</strong> If the company exits at $1.5B in year 6, proceeds are 14.5% × $1.5B = $217.7M: <strong>5.4x</strong> and about a <strong>33% IRR</strong>.</p>
+<p><strong>The judgment.</strong> Is a $1.4B outcome plausible for mid-market AP automation? Is $5B? The math does not answer that. It tells you exactly what you have to believe.</p></div></section>
+<section class="section" id="lab"><div class="eyebrow">Lab</div><div class="prose"><p>Defaults are Cobalt Ledger's Series B. Push the exit down to $700M, then ask what you would have to believe to pay $200M post-money.</p></div><div class="lab" data-lab="roundMath"><div class="lab-head"><span class="badge live">Lab</span><h3>Round math & returns</h3><span class="hint">$M unless noted</span></div>
+<div class="lab-body"><div class="lab-inputs"><div class="group-label">The round</div><div class="field"><label for="f-pre-140015112333424">Pre-money valuation</label><input id="f-pre-140015112333424" type="number" step="any" value="160" data-k="pre"></div><div class="field"><label for="f-inv-140015112323376">Investment</label><input id="f-inv-140015112323376" type="number" step="any" value="40" data-k="inv"></div><div class="group-label">Dilution to exit (% sold)</div><div class="field"><label for="f-d1-140015112333744">Next round</label><input id="f-d1-140015112333744" type="number" step="any" value="15" data-k="d1"></div><div class="field"><label for="f-d2-140015112333552">Round after</label><input id="f-d2-140015112333552" type="number" step="any" value="12" data-k="d2"></div><div class="field"><label for="f-d3-140015104797872">Option pool refreshes</label><input id="f-d3-140015104797872" type="number" step="any" value="3" data-k="d3"></div><div class="group-label">Exit & fund</div><div class="field"><label for="f-exit-140015469906096">Exit equity value</label><input id="f-exit-140015469906096" type="number" step="any" value="1500" data-k="exit"></div><div class="field"><label for="f-years-140015084065200">Years to exit</label><input id="f-years-140015084065200" type="number" step="any" value="6" data-k="years"></div><div class="field"><label for="f-target-140015084065008">Target MOIC</label><input id="f-target-140015084065008" type="number" step="any" value="5" data-k="target"></div><div class="field"><label for="f-fund-140015084066544">Fund size</label><input id="f-fund-140015084066544" type="number" step="any" value="750" data-k="fund"></div></div><div class="lab-outputs"><div class="out "><span>Post-money</span><span data-o="post">—</span></div><div class="out "><span>Entry ownership</span><span data-o="own">—</span></div><div class="out "><span>Retention through dilution</span><span data-o="retention">—</span></div><div class="out key"><span>Exit ownership</span><span data-o="exitOwn">—</span></div><div class="out "><span>Proceeds at exit</span><span data-o="proceeds">—</span></div><div class="out big"><span>MOIC</span><span data-o="moic">—</span></div><div class="out "><span>IRR</span><span data-o="irr">—</span></div><div class="out "><span>Exit needed for target MOIC</span><span data-o="reqExit">—</span></div><div class="out key"><span>Fund-returner exit</span><span data-o="fundReturner">—</span></div><div class="read" data-o="read"></div></div></div>
+<div class="lab-foot"><span>Defaults load the Cobalt Ledger case. Change any input — results update instantly.</span><button class="btn btn-outline" data-lab-reset style="margin-left:auto;height:32px">Reset Inputs</button></div></div></section>
+<section class="section" id="check"><div class="eyebrow">Practice check</div><h2 style="font-size:30px;margin:8px 0 16px">Five questions</h2><div class="quiz" data-quiz="vc-math"><div class="q" data-correct="1"><div class="qn">Question 1 of 5</div><div class="qt">An investor puts $8M into a company at a $32M pre-money. What does it own?</div><button class="opt" type="button">25.0%</button><button class="opt" type="button">20.0%</button><button class="opt" type="button">16.0%</button><button class="opt" type="button">32.0%</button><div class="explain">Post-money = $40M; $8M ÷ $40M = 20%.</div></div><div class="q" data-correct="0"><div class="qn">Question 2 of 5</div><div class="qt">You own 20% after the Series A. The next two rounds each sell 20% and 15%, and you take no pro rata. What do you own?</div><button class="opt" type="button">13.6%</button><button class="opt" type="button">15.0%</button><button class="opt" type="button">12.0%</button><button class="opt" type="button">16.0%</button><div class="explain">20% × 0.80 × 0.85 = 13.6%.</div></div><div class="q" data-correct="1"><div class="qn">Question 3 of 5</div><div class="qt">What is the IRR of a 3x return over 5 years, with one investment and one exit?</div><button class="opt" type="button">About 15%</button><button class="opt" type="button">About 25%</button><button class="opt" type="button">About 60%</button><button class="opt" type="button">About 40%</button><div class="explain">3^(1/5) − 1 ≈ 24.6%.</div></div><div class="q" data-correct="2"><div class="qn">Question 4 of 5</div><div class="qt">Exit ownership will be 10% and you need $300M of proceeds. What exit value do you need?</div><button class="opt" type="button">$300M</button><button class="opt" type="button">$1.0B</button><button class="opt" type="button">$3.0B</button><button class="opt" type="button">$30.0B</button><div class="explain">$300M ÷ 10% = $3.0B.</div></div><div class="q" data-correct="1"><div class="qn">Question 5 of 5</div><div class="qt">Why can a 3x MOIC be a great or a mediocre outcome?</div><button class="opt" type="button">MOIC is always a great outcome above 2x</button><button class="opt" type="button">Time to exit (IRR) and the position's ability to move the fund both matter</button><button class="opt" type="button">MOIC ignores the investment amount</button><button class="opt" type="button">Only gross MOIC matters</button><div class="explain">3x over 3 years is about a 44% IRR; over 10 years it is about 12%. A 3x on a tiny check may not move a large fund.</div></div><div class="quiz-score" hidden><span class="s">0 / 0</span><span class="msg"></span><button class="btn btn-outline" data-quiz-reset style="margin-left:auto">Retake</button></div></div></section>
+<section class="section" id="watch"><div class="eyebrow">AI watch-outs for this topic</div><h2 style="font-size:26px;margin:8px 0 12px">Where AI output goes wrong here</h2><div class="prose"><ul><li>Ownership math on the pre-money instead of the post-money.</li><li>Ignoring dilution from future rounds and pool refreshes when computing required exits.</li><li>IRR computed as MOIC divided by years, which is wrong.</li><li>Mixing equity value and enterprise value in exit math.</li><li>Fund-returner math on fund size vs. investable capital without saying which (see Module 8).</li></ul></div></section>
+<section class="section" id="graded"><div class="eyebrow">Prove it</div><h2 style="font-size:30px;margin:8px 0 12px">Graded case in Felix</h2>
+<div class="prose"><p>Paste this into a new Felix chat. Felix builds a fresh case, withholds the answer until you submit your own work, grades it against the rubric, asks you to explain it back and retests you on a new case.</p></div>
+<div class="prompt"><div class="prompt-head"><strong>Tutor prompt</strong><span class="badge">Answer withheld until you submit</span><button class="btn btn-brand" data-copy="graded-vc-math">Copy Prompt</button></div><pre id="graded-vc-math">You are my Rogo Academy tutor for &quot;Module 4: VC Math&quot; (Venture &amp; Growth Equity track). Teach like a demanding but fair senior investor.
+
+Rules for this session:
+1. Build a fresh fictional case: a fictional company raising a priced round, with a proposed pre-money and investment, a fund of a stated size, an expected path of two to three future rounds with indicative sizes and valuations (not just percentages), and one round where our fund exercises pro rata. Use realistic but invented names and numbers. Do not reuse Cobalt Ledger or any real company.
+2. Give me the case inputs and the task only. Do not show the answer, the completed calculations or a worked solution until I submit my own work.
+3. If I ask for the answer before submitting, give me one targeted hint at a time instead.
+4. My task: Compute entry ownership, dilution through each round (derive each round&#x27;s % sold from its size and post-money), the cost and effect of the pro rata, exit ownership, required exit for a 5x target, fund-returner exit, and MOIC and IRR at two exit values. Then state in two sentences whether the deal can plausibly return the fund.
+5. When I submit, grade my work out of 100 against this rubric:
+  - Entry and per-round dilution computed correctly (30)
+  - Pro rata cost and effect handled correctly (15)
+  - Required exit and fund-returner math correct (25)
+  - MOIC and IRR correct (15)
+  - Judgment on plausibility is clear and grounded (15)
+   For each criterion show my score, what I got right, each error (where it is and why it matters) and the corrected approach.
+6. Then ask me two explain-back questions on the key drivers, without AI help, and grade my answers.
+7. Finish with a retest case that changes the numbers and one structural feature. Same rules: no answers until I submit.
+Keep the whole exercise to about 45 minutes. Start by confirming my experience level in one question, then present the case.</pre></div>
+<div class="complete"><div><h3>Finished the module?</h3><p>Mark it complete once you have run the graded case in Felix and passed the explain-back. Progress stays in this browser only.</p></div><div class="btn-row"><button class="btn btn-light" data-complete-btn="vc-math">Mark Module Complete</button></div></div>
+<div class="pager"><a href="../../vc/fundamentals/unit-economics.html"><small>Previous</small><span>SaaS Metrics & Unit Economics</span></a><a class="next" href="../../vc/fundamentals/valuation.html"><small>Next</small><span>Module 5: Valuation in Venture & Growth</span></a></div>
+</section></div></div>
+</main>
+<footer class="footer"><div class="footer-inner">
+  <img src="../../assets/rogo-wordmark-light.png" alt="Rogo">
+  <p>Rogo Academy · Pilot edition. Companies, funds and figures in cases are fictional and for training only; nothing here is investment advice. Your progress is saved only in this browser — no one else can see it.</p>
+  <button class="btn btn-ghost-light" data-reset-progress style="margin-left:auto">Reset My Progress</button>
+</div></footer>
+<script src="../../assets/app.js"></script>
+<script src="../../assets/labs.js"></script>
+</body>
+</html>
